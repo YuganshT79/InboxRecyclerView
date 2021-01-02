@@ -97,6 +97,70 @@ object EmailRepository {
 
         EmailThread(
             id = 5L,
+            sender = Person("Sandra Adams", R.drawable.avatar_sandra),
+            subject = "Bonjour from Paris",
+            emails = listOf(
+                Email(
+                    body = "Here are some great shots from my trip to Paris this summer!",
+                    attachments = listOf(
+                        Attachment.Image(R.drawable.attachment_1),
+                        Attachment.Image(R.drawable.attachment_2),
+                        Attachment.Image(R.drawable.attachment_3),
+                        Attachment.Image(R.drawable.attachment_4)),
+                    recipients = listOf(user),
+                    timestamp = "6 hrs ago"))
+        ),
+
+        EmailThread(
+            id = 6L,
+            sender = Person("Mom", R.drawable.avatar_mom),
+            subject = "Fwd: Article on Workplace Zen",
+            emails = listOf(
+                Email(
+                    body = "Hi sweetie, I saw this and thought you would find this useful.",
+                    recipients = listOf(user),
+                    attachments = listOf(Attachment.Pdf),
+                    timestamp = "Yesterday"))
+        ),
+
+        EmailThread(
+            id = 7L,
+            sender = Person("Mom", R.drawable.avatar_mom),
+            subject = "Fwd: Article on Workplace Zen",
+            emails = listOf(
+                Email(
+                    body = "Hi sweetie, I saw this and thought you would find this useful.",
+                    recipients = listOf(user),
+                    attachments = listOf(Attachment.Pdf),
+                    timestamp = "Yesterday"))
+        ),
+
+        EmailThread(
+            id = 8L,
+            sender = Person("Mom", R.drawable.avatar_mom),
+            subject = "Fwd: Article on Workplace Zen",
+            emails = listOf(
+                Email(
+                    body = "Hi sweetie, I saw this and thought you would find this useful.",
+                    recipients = listOf(user),
+                    attachments = listOf(Attachment.Pdf),
+                    timestamp = "Yesterday"))
+        ),
+
+        EmailThread(
+            id = 9L,
+            sender = Person("Mom", R.drawable.avatar_mom),
+            subject = "Fwd: Article on Workplace Zen",
+            emails = listOf(
+                Email(
+                    body = "Hi sweetie, I saw this and thought you would find this useful.",
+                    recipients = listOf(user),
+                    attachments = listOf(Attachment.Pdf),
+                    timestamp = "Yesterday"))
+        ),
+
+        EmailThread(
+            id = 10L,
             sender = Person("Mom", R.drawable.avatar_mom),
             subject = "Fwd: Article on Workplace Zen",
             emails = listOf(

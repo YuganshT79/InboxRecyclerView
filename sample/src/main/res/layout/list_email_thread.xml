@@ -3,17 +3,16 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
-  android:layout_marginBottom="@dimen/emailthread_item_vertical_margin"
-  android:layout_marginEnd="4dp"
-  android:layout_marginStart="4dp"
   android:layout_marginTop="@dimen/emailthread_item_vertical_margin"
-  android:background="@color/email_thread_background"
-  android:stateListAnimator="@animator/thread_elevation_stateanimator"
-  android:paddingBottom="16dp"
-  android:paddingEnd="14dp"
-  android:paddingStart="14dp"
+  android:layout_marginBottom="@dimen/emailthread_item_vertical_margin"
+  android:layout_marginStart="4dp"
+  android:layout_marginEnd="4dp"
   android:paddingTop="18dp"
-  tools:ignore="UselessParent">
+  android:paddingBottom="16dp"
+  android:paddingStart="14dp"
+  android:paddingEnd="14dp"
+  android:background="@color/email_thread_background"
+  android:stateListAnimator="@animator/thread_elevation_stateanimator">
 
   <TextView
     android:id="@+id/emailthread_item_byline"
@@ -28,33 +27,22 @@
     android:id="@+id/emailthread_item_subject"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
     android:layout_alignEnd="@+id/emailthread_item_byline"
     android:layout_alignStart="@+id/emailthread_item_byline"
     android:layout_below="@+id/emailthread_item_byline"
-    android:layout_marginTop="4dp"
     android:fontFamily="@font/worksans_bold"
     android:textColor="#1D2C2F"
     android:textSize="@dimen/emailthread_subject_textize_without_photo_attachments"
     tools:text="Package shipped!" />
 
-  <de.hdodenhof.circleimageview.CircleImageView
-    android:id="@+id/emailthread_item_avatar"
-    style="@style/Expand.SenderAvatar"
-    android:layout_width="40dp"
-    android:layout_height="40dp"
-    android:layout_alignParentEnd="true"
-    android:layout_marginEnd="2dp"
-    android:layout_marginStart="16dp"
-    tools:ignore="ContentDescription"
-    tools:src="@drawable/avatar_jerry_chang" />
-
   <TextView
     android:id="@+id/emailthread_item_body"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_below="@+id/emailthread_item_subject"
-    android:layout_marginEnd="24dp"
     android:layout_marginTop="7dp"
+    android:layout_marginEnd="24dp"
+    android:layout_below="@+id/emailthread_item_subject"
     android:drawablePadding="16dp"
     android:drawableStart="@drawable/ic_attachment_24dp"
     android:drawableTint="#45676E"
@@ -68,8 +56,20 @@
     android:id="@+id/emailthread_image_attachments_stub"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:layout_below="@+id/emailthread_item_body"
     android:layout_marginTop="16dp"
+    android:layout_below="@+id/emailthread_item_body"
     android:inflatedId="@+id/emailthread_image_attachments"
-    android:layout="@layout/include_thread_image_attachments" />
+    android:layout="@layout/include_thread_image_attachments"
+    tools:visibility="visible" />
+
+  <de.hdodenhof.circleimageview.CircleImageView
+    android:id="@+id/emailthread_item_avatar"
+    style="@style/Expand.SenderAvatar"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="2dp"
+    android:layout_alignParentEnd="true"
+    tools:ignore="ContentDescription"
+    tools:src="@drawable/avatar_jerry_chang" />
 </RelativeLayout>
